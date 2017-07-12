@@ -1,0 +1,2 @@
+# CdkTraining
+training session assignements
