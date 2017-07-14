@@ -41,6 +41,6 @@ public class Bus extends Automobile {
         System.out.println("=======Bus Specification ========");
         super.display();
         System.out.println("Bus Type : " + busType);
-        System.out.println("Status of Tv" + statusOfTv);
+        System.out.println("Status of Tv : " + statusOfTv);
     }
 }
