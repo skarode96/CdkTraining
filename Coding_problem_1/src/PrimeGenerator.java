@@ -1,9 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by karodes on 7/17/2017.
  */
-public class Main {
-    public static void main(String[] args) {
-        int upperBound = 20;
+public class PrimeGenerator {
+
+    public static List<Integer> generatePrime(int upperBound) {
+        ArrayList<Integer> primeList = new ArrayList<Integer>(1000);
         boolean flag = false;
 
         for(int n=2; n<upperBound; n++)
@@ -16,7 +20,9 @@ public class Main {
                     break;
                 }
             if(flag)
-                System.out.println("Prime number : " + n);
+                primeList.add(n);
         }
+        return primeList;
     }
+
 }
