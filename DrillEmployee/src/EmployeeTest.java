@@ -1,4 +1,6 @@
-import java.util.Date;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -6,23 +8,43 @@ import java.util.List;
  */
 public class EmployeeTest {
     public static void main(String[] args) {
-        List<Employee> listOfEmployee = Employee.giveTestData();
-        Compare compareImpl = new CompareIds();
+        List<Object> listOfEmployee = Employee.giveTestData();
+        Comparator idComparator = new IDComparator();
         System.out.println("========Before Sorting==============");
-        for (Employee employee: listOfEmployee) {
+        for (Object employee: listOfEmployee) {
             System.out.println(employee.toString());
         }
         System.out.println("========After Sorting by Ids==============");
 
-        MyUtil.sort(listOfEmployee,compareImpl);
-        for (Employee employee: listOfEmployee) {
+        Collections.sort(listOfEmployee,idComparator);
+        //MyUtil.sort(listOfEmployee,compareImpl);
+        for (Object employee: listOfEmployee) {
             System.out.println(employee.toString());
         }
         System.out.println("========After Sorting by Names==============");
-        compareImpl = new CompareNames();
+        Compare compareImpl = new CompareNames();
         MyUtil.sort(listOfEmployee,compareImpl);
-        for (Employee employee: listOfEmployee) {
+        for (Object employee: listOfEmployee) {
             System.out.println(employee.toString());
+        }
+
+        List<Object> listOfBooks = Book.giveTestData();
+        compareImpl = new CompareIdsBooks();
+        System.out.println("========Before Sorting==============");
+        for (Object bookItr: listOfBooks) {
+            System.out.println(bookItr.toString());
+        }
+        System.out.println("========After Sorting by Ids==============");
+
+        MyUtil.sort(listOfBooks,compareImpl);
+        for (Object bookItr: listOfBooks) {
+            System.out.println(bookItr.toString());
+        }
+        System.out.println("========After Sorting by Names==============");
+        compareImpl = new BookNameCompare();
+        MyUtil.sort(listOfBooks,compareImpl);
+        for (Object bookItr: listOfBooks) {
+            System.out.println(bookItr.toString());
         }
 
     }

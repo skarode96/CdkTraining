@@ -93,8 +93,8 @@ public class Employee {
 //        System.out.println("Location : " + this.location);
 //        System.out.println("===========================");
 //    }
-    public static List<Employee> giveTestData() {
-        List<Employee> listOfEmployee = new ArrayList<Employee>();
+    public static List<Object> giveTestData() {
+        List<Object> listOfEmployee = new ArrayList<>();
         listOfEmployee.add(new Employee("Sameer",2,new Date(95,11,12),2,"Pune"));
         listOfEmployee.add(new Employee("Mahesh",9,new Date(95,11,11),2,"Pune"));
         listOfEmployee.add(new Employee("Nitesh",99,new Date(95,07,12),2,"Pune"));
