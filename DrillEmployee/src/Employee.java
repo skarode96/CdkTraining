@@ -7,18 +7,24 @@ import java.util.List;
  * Created by karodes on 7/18/2017.
  */
 public class Employee {
-    private String name;
+    private String firstName;
+    private String lastName;
     int id;
     String dateOfBirth ;
     int depId;
     String location;
     Date date;
 
+    public String getLastName() {
+        return lastName;
+    }
+
     @Override
     public String toString() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MMM-dd");
         return "Employee{" +
-                "name='" + name + '\'' +
+                "firstName='" + firstName + '\'' +
+                "lastName='" + lastName + '\'' +
                 ", Id=" + id +
                 // ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", depId=" + depId +
@@ -27,8 +33,9 @@ public class Employee {
                 '}';
     }
 
-    public Employee(String name, int id, Date date, int depId, String location) {
-        this.name = name;
+    public Employee(String firstName, String lastName, int id, Date date, int depId, String location) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.id = id;
         //this.dateOfBirth = dateOfBirth;
         this.date = date;
@@ -36,12 +43,12 @@ public class Employee {
         this.location = location;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public int getId() {
@@ -86,7 +93,7 @@ public class Employee {
 
     //    public void display() {
 //        System.out.println("===========================");
-//        System.out.println("Name : " + this.name);
+//        System.out.println("Name : " + this.firstName);
 //        System.out.println("Id : " + this.id);
 //        System.out.println("Date Of Birth : " + date);
 //        System.out.println("Dep ID : " + this.depId);
@@ -95,11 +102,11 @@ public class Employee {
 //    }
     public static List<Object> giveTestData() {
         List<Object> listOfEmployee = new ArrayList<>();
-        listOfEmployee.add(new Employee("Sameer",2,new Date(95,11,12),2,"Pune"));
-        listOfEmployee.add(new Employee("Mahesh",9,new Date(95,11,11),2,"Pune"));
-        listOfEmployee.add(new Employee("Nitesh",99,new Date(95,07,12),2,"Pune"));
-        listOfEmployee.add(new Employee("Jaggu",0,new Date(96,11,12),2,"Pune"));
-        listOfEmployee.add(new Employee("Mukta",7,new Date(95,10,04),2,"Pune"));
+        listOfEmployee.add(new Employee("Sameer", "Karode", 2,new Date(95,11,12),2,"Pune"));
+        listOfEmployee.add(new Employee("Mahesh", "Jagtap", 9,new Date(95,11,11),99,"Pune"));
+        listOfEmployee.add(new Employee("Nitesh", "Bagle", 99,new Date(95,07,12),1,"Pune"));
+        listOfEmployee.add(new Employee("Jaggu", "Jasoos", 0,new Date(96,11,12),45,"Pune"));
+        listOfEmployee.add(new Employee("Mukta", "Kulkarni", 7,new Date(95,10,04),32,"Pune"));
         return listOfEmployee;
     }
 

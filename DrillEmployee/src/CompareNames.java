@@ -7,7 +7,7 @@ public class CompareNames implements Compare {
         Employee employee1 = (Employee) ob1;
         Employee employee2 = (Employee) ob2;
         int compareVal;
-        compareVal = employee1.getName().compareTo(employee2.getName());
+        compareVal = employee1.getFirstName().compareTo(employee2.getFirstName());
         if (compareVal < 0){
             return 0;
         }
