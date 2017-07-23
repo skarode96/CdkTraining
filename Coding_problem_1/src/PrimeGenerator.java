@@ -8,7 +8,7 @@ public class PrimeGenerator {
 
     public static List<Integer> generatePrime(int upperBound) {
         ArrayList<Integer> primeList = new ArrayList<Integer>(1000);
-        boolean flag = false;
+        boolean flag;
 
         for(int n=2; n<upperBound; n++)
         {
