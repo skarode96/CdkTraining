@@ -25,6 +25,15 @@ public class Person {
         return gender;
     }
 
+
+    @Override
+    public boolean equals(Object obj) {
+        if(((Person)obj).getName() == this.getName())
+            return true;
+        else
+            return false;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
