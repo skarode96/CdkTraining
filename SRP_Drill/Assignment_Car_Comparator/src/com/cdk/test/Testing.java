@@ -15,13 +15,31 @@ import java.util.TreeSet;
 public class Testing {
     @Test
     public void test1(){
-        TreeSet<Car> carSet = Car.createCarData(new BrandComparator());
-        Iterator<Car> iterator = carSet.iterator();
+        System.out.println("=================Default comparison by price===============");
+        TreeSet<Car> carSet = Car.createCarData();
 
+        Iterator<Car> iterator = carSet.iterator();
         while (iterator.hasNext()){
             Car car = iterator.next();
             System.out.println(car);
         }
+
+        System.out.println("==============Comparison by Brand=======================");
+        carSet = Car.createCarData(new BrandComparator());
+        iterator = carSet.iterator();
+        while (iterator.hasNext()){
+            Car car = iterator.next();
+            System.out.println(car);
+        }
+
+        System.out.println("==============Comparison by Id=======================");
+        carSet = Car.createCarData(new IdComparator());
+        iterator = carSet.iterator();
+        while (iterator.hasNext()){
+            Car car = iterator.next();
+            System.out.println(car);
+        }
+
 
     }
 }
