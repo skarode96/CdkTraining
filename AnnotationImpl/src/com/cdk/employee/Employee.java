@@ -1,8 +1,8 @@
 
 package com.cdk.employee;
 
-import com.cdk.Annotations.Company;
-import com.cdk.Annotations.TimeStamp;
+import com.cdk.annotations.Company;
+import com.cdk.annotations.TimeStamp;
 import com.cdk.enums.DAY;
 import com.cdk.enums.MONTH;
 import com.cdk.enums.YEAR;

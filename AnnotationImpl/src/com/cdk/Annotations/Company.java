@@ -1,4 +1,4 @@
-package com.cdk.Annotations;
+package com.cdk.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

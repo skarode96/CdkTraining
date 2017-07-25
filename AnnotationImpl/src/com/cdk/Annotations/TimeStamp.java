@@ -1,4 +1,4 @@
-package com.cdk.Annotations;
+package com.cdk.annotations;
 
 import com.cdk.enums.DAY;
 import com.cdk.enums.MONTH;
