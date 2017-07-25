@@ -1,8 +1,8 @@
 package com.cdk.Annotations;
 
-import com.cdk.enums.Day;
-import com.cdk.enums.Month;
-import com.cdk.enums.Year;
+import com.cdk.enums.DAY;
+import com.cdk.enums.MONTH;
+import com.cdk.enums.YEAR;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.TYPE)
 public @interface TimeStamp {
-    Year year();
-    Month month();
-    Day day();
+    YEAR year();
+    MONTH month();
+    DAY day();
 }

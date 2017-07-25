@@ -3,16 +3,16 @@ package com.cdk.employee;
 
 import com.cdk.Annotations.Company;
 import com.cdk.Annotations.TimeStamp;
-import com.cdk.enums.Day;
-import com.cdk.enums.Month;
-import com.cdk.enums.Year;
+import com.cdk.enums.DAY;
+import com.cdk.enums.MONTH;
+import com.cdk.enums.YEAR;
 
 
 /**
  * Created by karodes on 7/24/2017.
  */
 @Company(name = "CDK global",location = "Pune")
-@TimeStamp(year = Year.YEAR2015,month = Month.JUL,day = Day.MON)
+@TimeStamp(year = YEAR.YEAR2015,month = MONTH.JUL,day = DAY.MON)
 
 public class Employee {
 
