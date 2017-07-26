@@ -9,6 +9,7 @@ public class User {
     int age;
     int rating;
 
+
     public User(int uid, String name, int age, int rating) {
         this.uid = uid;
         this.name = name;
