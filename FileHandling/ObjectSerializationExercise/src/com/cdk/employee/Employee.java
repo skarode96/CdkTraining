@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Employee implements Comparable<Employee>,Serializable{
     private int uid;
     private String name;
-    private double salary;
+    private transient double salary;
     private String location;
 
     public Employee(int uid, String name, double salary, String location) {
