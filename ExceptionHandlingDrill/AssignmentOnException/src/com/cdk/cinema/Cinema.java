@@ -12,7 +12,7 @@ public class Cinema {
         try {
             MovieService.buy(user, 1800);
         } catch (InvalidPriceException e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         } catch (RatingBelowThreeException e) {
             System.out.println(e.getMessage());
         } catch (Exception e) {
