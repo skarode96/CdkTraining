@@ -1,11 +1,3 @@
-.DS_Store
-
 *.iml
-
-.idea
-
-*.class
-
-target/
-
 *.xml
+*.class

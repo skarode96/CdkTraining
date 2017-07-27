@@ -2,6 +2,7 @@ package com.cdk.car;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.Serializable;
 import java.util.Comparator;
 import java.util.HashSet;
 
@@ -9,7 +10,7 @@ import java.util.HashSet;
 /**
  * Created by karodes on 7/25/2017.
  */
-public class Car implements Comparable {
+public class Car implements Comparable,Serializable {
     int id;
     String brand;
     double price;
