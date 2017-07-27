@@ -1,6 +1,10 @@
 import comparator.EmployeeComparator;
+import comparator.IdComparator;
+import comparator.NameComparator;
 import employee.Employee;
 import org.junit.Test;
+import utility.CustomSort;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -32,7 +36,7 @@ public class TestClass {
         employeesList.add(new Employee("Sushant","Bhaskar","RnD",251,"Pune"));
         employeesList.add(new Employee("Binay","Sawant","RnD",252,"Pune"));
         employeesList.add(new Employee("Snigdha","Sahoo","RnD",253,"Pune"));
-        Collections.sort(employeesList,new EmployeeComparator());
+        CustomSort.sort(employeesList,new EmployeeComparator(new IdComparator(),new NameComparator()));
         for (Employee employee:employeesList
              ) {
             System.out.println(employee);
