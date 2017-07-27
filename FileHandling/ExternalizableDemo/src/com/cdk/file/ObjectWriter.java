@@ -21,7 +21,7 @@ public class ObjectWriter {
             while(itr.hasNext()) {
                 Employee employee = itr.next();
                 objectOutputStream.writeObject(employee);
-
+//                objectOutputStream.flush();
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
