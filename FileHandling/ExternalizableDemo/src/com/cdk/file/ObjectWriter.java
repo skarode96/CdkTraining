@@ -2,7 +2,10 @@ package com.cdk.file;
 
 import com.cdk.employee.Employee;
 
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -18,7 +21,7 @@ public class ObjectWriter {
             fileOutputStream = new FileOutputStream("C:\\Users\\karodes\\Documents\\CdkTraining\\FileHandling\\ObjectSerializationExercise\\src\\com\\cdk\\file\\employee_data.txt");
             objectOutputStream = new ObjectOutputStream(fileOutputStream);
             Iterator<Employee> itr = employeeArrayList.iterator();
-            while(itr.hasNext()) {
+            while (itr.hasNext()) {
                 Employee employee = itr.next();
                 objectOutputStream.writeObject(employee);
 //                objectOutputStream.flush();
@@ -29,14 +32,14 @@ public class ObjectWriter {
             e.printStackTrace();
         } finally {
             try {
-                if(objectOutputStream != null){
+                if (objectOutputStream != null) {
                     objectOutputStream.close();
                 }
-                if(fileOutputStream != null){
+                if (fileOutputStream != null) {
                     fileOutputStream.close();
                 }
 
-            } catch (IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }

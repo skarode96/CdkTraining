@@ -28,6 +28,7 @@ public class TestClass {
         ObjectWriter.writeData(employeeArrayList);
 
     }
+
     // For filtering the list
     @Test
     public void test2() {
@@ -39,9 +40,10 @@ public class TestClass {
             System.out.println(employee);
         }
     }
+
     //for reading operation
     @Test
-    public void test3(){
+    public void test3() {
         ObjectReader.readData();
     }
 

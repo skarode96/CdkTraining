@@ -2,18 +2,22 @@ package com.cdk.employee;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.*;
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 import java.util.ArrayList;
 
 /**
  * Created by karodes on 7/27/2017.
  */
-public class Employee implements Comparable<Employee>,Externalizable{
+public class Employee implements Comparable<Employee>, Externalizable {
     private int uid;
     private String name;
-    private  double salary;
+    private double salary;
     private String location;
-// this constructor is mandatory
+
+    // this constructor is mandatory
     public Employee() {
         super();
     }
@@ -73,7 +77,7 @@ public class Employee implements Comparable<Employee>,Externalizable{
 
     @Override
     public int compareTo(@NotNull Employee o) {
-        return this.getUid()-o.getUid();
+        return this.getUid() - o.getUid();
     }
 
     @Override
@@ -88,8 +92,8 @@ public class Employee implements Comparable<Employee>,Externalizable{
     @Override
     public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
         uid = in.readInt();
-        name = (String)in.readObject();
+        name = (String) in.readObject();
 //        salary = in.readDouble();
-        location = (String)in.readObject();
+        location = (String) in.readObject();
     }
 }

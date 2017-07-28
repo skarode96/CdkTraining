@@ -11,14 +11,14 @@ import java.io.ObjectInputStream;
  * Created by karodes on 7/27/2017.
  */
 public class ObjectReader {
-    public static void readData(){
+    public static void readData() {
         FileInputStream fileInputStream = null;
         ObjectInputStream objectInputStream = null;
         Employee employee = null;
         try {
             fileInputStream = new FileInputStream("C:\\Users\\karodes\\Documents\\CdkTraining\\FileHandling\\ObjectSerializationExercise\\src\\com\\cdk\\file\\employee_data.txt");
             objectInputStream = new ObjectInputStream(fileInputStream);
-            while (objectInputStream.available() != -1){
+            while (objectInputStream.available() != -1) {
                 try {
                     employee = (Employee) objectInputStream.readObject();
                     System.out.println(employee);
@@ -31,22 +31,21 @@ public class ObjectReader {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        finally {
-                if(objectInputStream != null) {
-                    try {
-                        objectInputStream.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+        } finally {
+            if (objectInputStream != null) {
+                try {
+                    objectInputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-                if(fileInputStream != null) {
-                    try {
-                        fileInputStream.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+            }
+            if (fileInputStream != null) {
+                try {
+                    fileInputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
+            }
 
         }
 
